@@ -16,7 +16,6 @@ function raizQuadrada(n) {
 function restoDivisao(dividendo, divisor) { return dividendo % divisor; }
 function fatorial(n) {
   if (n < 0) throw new Error('Fatorial não é definido para números negativos.');
-  if (n === 0 || n === 1) return 1;
   let resultado = 1;
   for (let i = 2; i <= n; i++) { resultado *= i; }
   return resultado;
@@ -63,7 +62,7 @@ function radianosParaGraus(radianos) { return radianos * (180 / Math.PI); }
 
 // === Bloco 4: Teoria dos Números e Sequências (31-40) ===
 function mdc(a, b) { // Máximo Divisor Comum
-  while(b) { [a, b] = [b, a % b]; }
+  while (b) { [a, b] = [b, a % b]; }
   return a;
 }
 function mmc(a, b) { // Mínimo Múltiplo Comum
@@ -81,7 +80,7 @@ function fibonacci(n) { // Retorna o n-ésimo termo
   return fibonacci(n - 1) + fibonacci(n - 2);
 }
 function produtoArray(numeros) {
-  if (numeros.length === 0) return 1;
+  if (numeros.length === 0) return 0;
   return numeros.reduce((acc, val) => acc * val, 1);
 }
 function clamp(valor, min, max) {
@@ -90,8 +89,8 @@ function clamp(valor, min, max) {
   return valor;
 }
 function isDivisivel(dividendo, divisor) { return dividendo % divisor === 0; }
-function celsiusParaFahrenheit(celsius) { return (celsius * 9/5) + 32; }
-function fahrenheitParaCelsius(fahrenheit) { return (fahrenheit - 32) * 5/9; }
+function celsiusParaFahrenheit(celsius) { return (celsius * 9 / 5) + 32; }
+function fahrenheitParaCelsius(fahrenheit) { return (fahrenheit - 32) * 5 / 9; }
 function inverso(n) {
   if (n === 0) throw new Error('Não é possível inverter o número zero.');
   return 1 / n;
